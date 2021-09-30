@@ -4,6 +4,7 @@ void printWelcomeMenu();
 void printOptions();
 void add();
 void subtract();
+void exit();
 
 
 void main() {
@@ -21,8 +22,12 @@ void main() {
 	{
 	case 1:
 		add();
+		break;
 	case 2:
 		subtract();
+		break;
+	case 3:
+		exit();
 	}
 
 }
@@ -37,6 +42,7 @@ void printWelcomeMenu() {
 void printOptions() {
 	printf("1. Add\n");
 	printf("2. Subtract\n");
+	printf("3. Exit\n");
 }
 
 void add() {
@@ -57,4 +63,8 @@ void subtract() {
 	scanf_s("%lf", &num2);
 	result = num1 - num2;
 	printf("%lf - %lf = %lf\n", num1, num2, result);
+}
+
+void exit() {
+	printf("** Session has ended **\n");
 }
